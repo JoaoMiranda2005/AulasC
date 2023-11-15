@@ -4,10 +4,8 @@ int main() {
     int numVotantes, voto;
     int votosA = 0, votosB = 0, votosC = 0;
 
-
     printf("Digite o número total de Cidadões que vão votar: ");
     scanf("%d", &numVotantes);
-
 
     if (numVotantes <= 0) {
         printf("Número de votantes inválido. O programa será encerrado.\n");
