@@ -45,7 +45,7 @@ int main() {
         scanf("%f", &turma[i].nota2);
 
         // Calcula a média ponderada (Nota1 com peso 1.0 e Nota2 com peso 2.0)
-        turma[i].mediaFinal = (turma[i].nota1 + 2 * turma[i].nota2) / 3;
+        turma[i].mediaFinal = (turma[i].nota1 + 2 * turma[i].nota2) / 2;
     }
 
     // Exibe a listagem final dos alunos e suas médias finais
