@@ -21,7 +21,7 @@ int main() {
         fgets(entrada, TAMANHO_MAXIMO_LINHA, stdin);
 
         entrada[strcspn(entrada, "\n")] = '\0';
-        
+
         if (strcmp(entrada, "FIM") == 0) {
             break;
         }
@@ -43,7 +43,7 @@ int main() {
         fprintf(arquivo, "%s\n", linhas[i]);
         free(linhas[i]);
     }
-
+    
     fclose(arquivo);
 
     printf("O conteúdo foi gravado no arquivo: editor_texto.txt\n");
