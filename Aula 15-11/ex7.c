@@ -1,6 +1,4 @@
 #include <stdio.h>
-
-// Definição da estrutura para armazenar os dados do aluno
 struct Aluno {
     int matricula;
     char nome[50];
@@ -11,21 +9,16 @@ struct Aluno {
 };
 
 int main() {
-    // Declaração de variáveis
     struct Aluno turma[10];
     int numAlunos;
-
-    // Solicita o número de alunos na turma (até no máximo 10)
     printf("Digite o número de alunos na turma (até 10): ");
     scanf("%d", &numAlunos);
-
-    // Garante que o número de alunos é válido
     if (numAlunos <= 0 || numAlunos > 10) {
         printf("Número de alunos inválido. O programa será encerrado.\n");
-        return 1;  // Retorna código de erro
+        return 1;  
     }
 
-    // Realiza a leitura dos dados dos alunos
+
     for (int i = 0; i < numAlunos; i++) {
         printf("\nDados do Aluno %d:\n", i + 1);
 
@@ -44,11 +37,9 @@ int main() {
         printf("Nota2: ");
         scanf("%f", &turma[i].nota2);
 
-        // Calcula a média ponderada (Nota1 com peso 1.0 e Nota2 com peso 2.0)
         turma[i].mediaFinal = (turma[i].nota1 + 2 * turma[i].nota2) / 3;
     }
 
-    // Exibe a listagem final dos alunos e suas médias finais
     printf("\nListagem Final dos Alunos:\n");
     printf("Matricula | Nome                | Código da Disciplina | Nota1 | Nota2 | Média Final\n");
     for (int i = 0; i < numAlunos; i++) {
