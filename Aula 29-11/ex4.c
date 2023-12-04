@@ -44,7 +44,6 @@ int main() {
         free(linhas[i]);
     }
 
-    // Fecha o arquivo
     fclose(arquivo);
 
     printf("O conteúdo foi gravado no arquivo: editor_texto.txt\n");
